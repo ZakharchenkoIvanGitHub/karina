@@ -5,14 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:L_PAK"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="   L-PAK" Height="450" Width="800" Icon="/L-PAK.ico">
     <Grid>
         <TabControl>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="КЛИЕНТЫ" Background="{x:Null}" Foreground="#FF774342" FontFamily="Arial Black" Padding="45,2,45,2">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="198*">
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="265*">
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="265*">
+
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Row="0" Grid.ColumnSpan="4" TextWrapping="Wrap" Text="ПРИМЕЧАНИЕ" VerticalAlignment="Bottom" Background="#FFBE8E74" Height="150" FontFamily="Arial Black" Foreground="White" HorizontalContentAlignment="Center"/>
+
+
+                    <Grid Grid.ColumnSpan="3" Margin="0,0,264,0"/>
+                    <DataGrid Grid.ColumnSpan="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,150"/>
+                    <DataGrid Grid.ColumnSpan="2" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Column="2" Margin="264,0,0,150"/>
+                </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="ЗАЯВКИ" Foreground="#FF774342" FontFamily="Segoe UI Black" Padding="50,2,50,2">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                </Grid>
             </TabItem>
         </TabControl>
 

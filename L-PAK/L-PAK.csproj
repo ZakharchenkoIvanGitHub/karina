@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="L-PAK.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="L-PAK.ico" />
+  </ItemGroup>
+
 </Project>
